@@ -1,0 +1,215 @@
+@import 'https://fonts.googleapis.com/css?family=Nunito:300,400,500';
+
+body {
+    margin: 0 auto;
+    max-width: 50em;
+    line-height: 1.5;
+    padding: 4em 1em;
+    font-family: "Nunito", "Helvetica", "Arial", sans-serif;
+    color: #566b78;
+    text-align: left;
+}
+
+h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+h1,
+h2,
+strong {
+  color: #333;
+}
+
+.logo {
+    height: 5.5em;
+    overflow: hidden;
+    margin: 10px 0 0 10%;
+}
+
+
+a {
+    color: #566b78;
+}
+
+a:hover, a:active, .active a {
+    color: #9966CC;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 100;
+}
+
+/* navbar */
+.flex {
+    display: flex;
+    gap: var(--gap, 2rem);
+}
+
+
+.primary-header {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    z-index: 9999; 
+    width: 100%; 
+    height: 5.5em; 
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+   
+}
+
+.primary-header div {
+    height: 5.5em; 
+    margin-top: 0;
+}
+
+.primary-navigation {
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+
+}
+
+/* remove toggle from desktop */
+.mobile-nav-toggle {
+    display: none;
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+        background: hsl(0 0% 100% / 0.1) ;
+        backdrop-filter: blur(1rem);
+    }
+
+}
+/* text of navbar */
+.primary-navigation a {
+    text-decoration: none;
+}
+
+.primary-navigation a:active,
+.primary-navigation a:hover {
+    color: #9966CC;
+}
+
+
+/* more mobile friendly formatting */
+div {
+    /* background: #767775; */
+    flex-basis: 100%;
+    min-height: 100px;
+
+}
+
+@media (min-width: 600px) {
+    main {
+    flex-wrap: nowrap;
+    }
+
+    div {
+    flex-basis: 50%;
+    }
+}
+
+
+img {
+    height: 100%;
+}
+
+/* assets styled for mobile view  */
+/* media query */
+@media (max-width: 420px) {
+    .primary-navigation {
+        --gap: 2em;
+
+        top: 0; 
+        left: 0; 
+        right: 0;
+
+        position: absolute;
+        height: 100vh;
+        right: 0px;
+        z-index: 1000;
+        inset: 0 0 0 50%;
+
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        background: rgba(102,153,204,65%);
+        
+
+        /* move 100% of own width from right + */
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .primary-navigation[data-visible= "true"] {
+        transform: translateX(0);
+    }
+
+    /* nav button */
+    .mobile-nav-toggle {
+        display: block;
+        position: fixed;
+        /* set on top layer  */
+        z-index: 9999;
+        /* background-color: transparent;
+        /* background-image: url("assets/persimmon-logo.png"); */
+        /* background-repeat: no-repeat;
+        width: 1rem;
+        border: 0;
+        aspect-ratio: 1;  */
+        top: 2rem;
+        right: 15%;
+
+    }
+
+    /* icon update w/ menu expanded */
+    .mobile-nav-toggle[aria-expanded= "true"] {
+        background-image: url("assets/persimmon-logo.png");
+    }
+
+    .primary-navigation a {
+        color: white;
+    }
+
+    .project-container  {
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    } 
+}
+
+/* intro bio */
+#profile {
+    justify-content: center;
+    padding-top: 4em;
+    padding-bottom: 0.5em;
+    text-align: left;
+}
+
+
+/* profile box */
+#projects {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3em;
+    
+}
+
+.project-box {
+    border: 1px solid #bbb;
+    padding: 2em;
+    border-radius: 16px;
+}
+
+.project-box img {
+    width: 100%;
+}
+
+
+  
+
+  
+  

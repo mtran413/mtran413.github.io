@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>michelle's personal website</title>
+  <link rel="stylesheet" type="text/css" href="resources/css/index.css" />
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="resources/js/nav.js" defer></script>
+</head>
+<body>
+    <header class = "primary-header flex">
+        <div>
+          <a class = "nav-link scroll" href = "#top"><img src = "resources/images/spamLogo.png" class = "logo"></a>
+        </div>
+  
+        <button class = "mobile-nav-toggle" 
+        aria-controls="primary-navigation" aria-expanded="false">
+        </button>
+  
+        <nav>
+          <ul id = "primary-navigation" 
+          data-visible= "false" class= "primary-navigation flex">
+            <li class = "nav-item active">
+              <a class = "nav-link scroll" href = "#container">
+                <span aria-hidden="true"></span>about</a>
+            </li>
+            <li class = "nav-item">
+              <a class = "nav-link scroll" href = "#projects">
+                <span aria-hidden="true"></span>projects</a>
+            </li>
+            <li class = "nav-item">
+              <a class = "nav-link scroll" href = "#interests" id ="hobbies">
+                <span aria-hidden="true"></span>interests</a>
+            </li>
+            <li class = "nav-item">
+              <a class = "nav-link scroll" href = "#footer" id = "contact">
+                <span aria-hidden="true"></span>contact</a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+
+    <div id = "profile">
+        <img class = "profile-pic" 
+        src = resources/images/profilePic.png alt="pic of michelle tran">
+  
+          <h1>Hello! I’m Michelle.</h1>
+            <p> I am a junior at Pomona College studying <b>Cognitive Science and Asian Studies.</b> <br> </p>
+
+            As a first-generation low-income (FLI) student, I am passionate about using <b>UX research</b> to make technology more <b>accessible</b> for <b>underrepresented communities.</b> <br>
+            </p>
+      </div>
+
+      <div id = "projects">
+        <h1>Projects</h1>
+        <div class = "project-box">
+            <img src = "resources/images/ASPC.png" alt = "sagehen-sprint project"/>
+            <h2>UX Research: Pomona College's Student Government Website</h2>
+            <p>add a caption LOL</p>
+        </div>
+
+        <div class = "project-box">
+            <img src = "resources/images/ASPC.png" alt = "sagehen-sprint project"/>
+            <h2>UX Research: Upward Bound</h2>
+            <p>add a caption LOL</p>
+        </div>
+      </div>
+
+
+</body>
+</html>
