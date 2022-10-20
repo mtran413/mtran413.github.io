@@ -8,6 +8,7 @@ body {
     font-family: "Nunito", "Helvetica", "Arial", sans-serif;
     color: #566b78;
     text-align: left;
+    background-color: beige;
 }
 
 h2 {
@@ -186,26 +187,37 @@ img {
     justify-content: center;
     padding-top: 4em;
     padding-bottom: 0.5em;
-    text-align: left;
+    text-align: center;
 }
 
 
 /* profile box */
 #projects {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     row-gap: 3em;
+    column-gap: 2em;
     
 }
 
+.title {
+    text-decoration: none;
+    color: unset;
+}
+
 .project-box {
-    border: 1px solid #bbb;
+    /* border: 1px solid #bbb; */
     padding: 2em;
     border-radius: 16px;
+    background-color: white;
 }
 
 .project-box img {
+    display: block;
+    margin: auto;
+    height: auto;
     width: 100%;
+    margin: 0 0;
 }
 
 
